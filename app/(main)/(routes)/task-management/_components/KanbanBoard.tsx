@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useMemo, useState } from "react";
 import { Column, Id, Task } from "@/app/(main)/(routes)/task-management/types";
@@ -18,7 +18,6 @@ import { createPortal } from "react-dom";
 import TaskCard from "./TaskCard";
 import { PlusCircleIcon } from "lucide-react";
 
-
 const defaultCols: Column[] = [
   {
     id: "todo",
@@ -34,9 +33,7 @@ const defaultCols: Column[] = [
   },
 ];
 
-const defaultTasks: Task[] = [
-  
-];
+const defaultTasks: Task[] = [];
 
 export const KanbanBoard = () => {
   const [columns, setColumns] = useState<Column[]>(defaultCols);
@@ -158,7 +155,6 @@ export const KanbanBoard = () => {
 
     setTasks([...tasks, newTask]);
     localStorage.setItem("kanbanTasks", JSON.stringify(newTask));
-
   }
 
   function deleteTask(id: Id) {
@@ -175,7 +171,6 @@ export const KanbanBoard = () => {
 
     setTasks(newTasks);
     localStorage.setItem("kanbanTasks", JSON.stringify(newTasks));
-
   }
 
   function createNewColumn() {
@@ -281,7 +276,7 @@ export const KanbanBoard = () => {
       });
     }
   }
-}
+};
 
 function generateId() {
   return Math.floor(Math.random() * 10001);
