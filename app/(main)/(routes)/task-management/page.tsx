@@ -1,7 +1,7 @@
 import "./App.css";
 import { KanbanBoard } from "./_components/KanbanBoard";
 
-export const NoteTask = () => {
+const NoteTask = () => {
   return <KanbanBoard />;
 };
 
